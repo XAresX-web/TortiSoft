@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TORTISOFT - Demo Interactiva en Vivo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700;900&family=Space+Mono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/demo.css" />
+  </head>
+  <body>
+    <!-- NAVBAR -->
+<nav class="navbar">
+  <div class="navbar-container">
+    <a href="index.html" class="logo">
+      <img src="assets/logo-completo.png" alt="Tortisoft Logo">
+    </a>
+
+    <a href="index.html" class="close-demo">← Volver</a>
+  </div>
+</nav>
+
+
+    <!-- DEMO HERO -->
+    <section class="demo-hero">
+      <div class="demo-container">
+        <div class="demo-header">
+          <div class="demo-badge">
+            <span class="live-dot"></span>
+            <span>DEMO EN VIVO</span>
+          </div>
+          <h1 class="demo-title">
+            Mira <span class="gradient-text">TORTISOFT</span> en acción
+          </h1>
+          <p class="demo-subtitle">
+            Esta es una simulación en tiempo real de cómo verías tu tortillería
+            minuto a minuto. Todo lo que ves aquí es lo que tendrás en tu
+            negocio.
+          </p>
+        </div>
+
+        <!-- DASHBOARD PRINCIPAL -->
+        <div class="dashboard">
+          <div class="dashboard-header">
+            <div class="dashboard-title">
+              <h2>Dashboard Principal</h2>
+              <div class="time-badge">
+                <span>🕐</span>
+                <span id="current-time">--:--:--</span>
+              </div>
+            </div>
+            <div class="dashboard-actions">
+              <button
+                class="action-btn btn-secondary"
+                onclick="simulateNewSale()"
+              >
+                ⚡ Simular Venta
+              </button>
+              <button class="action-btn btn-primary" onclick="generateReport()">
+                📊 Generar Reporte
+              </button>
+            </div>
+          </div>
+
+          <!-- MÉTRICAS PRINCIPALES -->
+          <div class="metrics-grid">
+            <div class="metric-card">
+              <div class="metric-header">
+                <span class="metric-label">Ventas Hoy</span>
+                <div class="metric-icon">💰</div>
+              </div>
+              <div class="metric-value" id="total-sales">$0</div>
+              <div class="metric-change positive">
+                <span>↗</span>
+                <span>+<span id="sales-change">0</span>% vs ayer</span>
+              </div>
+            </div>
+
+            <div class="metric-card">
+              <div class="metric-header">
+                <span class="metric-label">Kilos Vendidos</span>
+                <div class="metric-icon">⚖️</div>
+              </div>
+              <div class="metric-value" id="total-kilos">0 kg</div>
+              <div class="metric-change positive">
+                <span>↗</span>
+                <span>+<span id="kilos-change">0</span>% vs ayer</span>
+              </div>
+            </div>
+
+            <div class="metric-card">
+              <div class="metric-header">
+                <span class="metric-label">Tickets</span>
+                <div class="metric-icon">🧾</div>
+              </div>
+              <div class="metric-value" id="total-tickets">0</div>
+              <div class="metric-change positive">
+                <span>↗</span>
+                <span>+<span id="tickets-change">0</span> hoy</span>
+              </div>
+            </div>
+
+            <div class="metric-card">
+              <div class="metric-header">
+                <span class="metric-label">Ticket Promedio</span>
+                <div class="metric-icon">📈</div>
+              </div>
+              <div class="metric-value" id="avg-ticket">$0</div>
+              <div class="metric-change positive">
+                <span>↗</span>
+                <span>+<span id="avg-change">0</span>%</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- VENTAS EN VIVO -->
+          <div class="live-sales">
+            <div class="section-title">
+              <h3>🔥 Ventas en Tiempo Real</h3>
+              <div class="live-indicator">
+                <span class="live-dot"></span>
+                <span>EN VIVO</span>
+              </div>
+            </div>
+            <ul class="sales-list" id="sales-list">
+              <!-- Las ventas se agregarán dinámicamente -->
+            </ul>
+          </div>
+
+          <!-- GRÁFICA DE VENTAS POR HORA -->
+          <div class="chart-container">
+            <div class="section-title">
+              <h3>📊 Ventas por Hora</h3>
+            </div>
+            <div class="chart" id="hourly-chart">
+              <!-- Barras generadas dinámicamente -->
+            </div>
+          </div>
+
+          <!-- INVENTARIO -->
+          <div class="inventory-sidebar">
+            <div class="section-title">
+              <h3>📦 Inventario en Tiempo Real</h3>
+            </div>
+            <div id="inventory-list">
+              <!-- Items de inventario -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ALERTAS EN VIVO -->
+    <div class="alerts-container" id="alerts-container">
+      <!-- Las alertas se agregarán dinámicamente -->
+    </div>
+
+    <!-- FOOTER CTA -->
+    <section class="demo-footer">
+      <h2 class="footer-title">
+        ¿Impresionante, <span class="gradient-text">verdad</span>?
+      </h2>
+      <p class="footer-subtitle">
+        Y esto es solo el 10% de lo que TORTISOFT puede hacer por tu
+        tortillería. Únete a la lista de espera y sé de los primeros en
+        transformar tu negocio.
+      </p>
+      <a href="index.html" class="footer-cta"> 🚀 Quiero TORTISOFT Ya </a>
+    </section>
+
+    <script src="js/demo.js" defer></script>
+    
+  </body>
+</html>
