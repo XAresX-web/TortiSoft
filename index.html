@@ -3,35 +3,87 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <title>TORTISOFT - Sistema Definitivo para Tortillerías</title>
+
+    <!-- ✅ FAVICON (OBLIGATORIO PARA GOOGLE) -->
+    <link rel="icon" href="/favicon.ico" />
+
+    <!-- Standard favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <!-- Apple Touch Icon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+
+    <!-- Android Chrome Icons -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="/android-chrome-192x192.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="512x512"
+      href="/android-chrome-512x512.png"
+    />
+
+    <!-- Web App Manifest -->
+    <link rel="manifest" href="/site.webmanifest" />
+
+    <!-- 🔹 SEO BÁSICO -->
+    <meta
+      name="description"
+      content="TORTISOFT es el sistema definitivo para la gestión de tortillerías en México."
+    />
+
+    <!-- 🔹 FUENTES -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700;900&family=Space+Mono:wght@400;700&display=swap"
       rel="stylesheet"
     />
+
+    <!-- 🔹 CSS -->
     <link rel="stylesheet" href="css/index.css" />
 
+    <!-- ✅ LOGO PARA GOOGLE (Schema.org) -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "TORTISOFT",
+        "url": "https://tudominio.com",
+        "logo": "https://tudominio.com/logo-google.png"
+      }
+    </script>
   </head>
+
   <body>
     <!-- NAVBAR -->
-<nav class="navbar">
-  <div class="navbar-container">
+    <nav class="navbar">
+      <div class="navbar-container">
+        <a href="#inicio" class="logo">
+          <img src="assets/logo-completo.png" alt="Tortisoft Logo" />
+        </a>
 
-    <a href="#inicio" class="logo">
-      <img src="assets/logo-completo.png" alt="Tortisoft Logo">
-    </a>
+        <ul class="nav-menu">
+          <li><a href="#inicio" class="nav-link">Inicio</a></li>
+          <li><a href="#problemas" class="nav-link">Problemas</a></li>
+          <li><a href="#solucion" class="nav-link">Solución</a></li>
+          <li>
+            <a href="#caracteristicas" class="nav-link">Características</a>
+          </li>
+        </ul>
 
-    <ul class="nav-menu">
-      <li><a href="#inicio" class="nav-link">Inicio</a></li>
-      <li><a href="#problemas" class="nav-link">Problemas</a></li>
-      <li><a href="#solucion" class="nav-link">Solución</a></li>
-      <li><a href="#caracteristicas" class="nav-link">Características</a></li>
-    </ul>
-
-    <button class="cta-nav">Solicitar Demo</button>
-  </div>
-</nav>
+        <button class="cta-nav">Solicitar Demo</button>
+      </div>
+    </nav>
 
     <!-- HERO SECTION -->
     <section id="inicio" class="hero">
@@ -535,7 +587,6 @@
       </div>
     </footer>
 
-  <script src="js/index.js" defer></script>
-
+    <script src="js/index.js" defer></script>
   </body>
 </html>
